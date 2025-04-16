@@ -3,8 +3,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 
 const EditUser = () => {
   const { id } = useParams();
-//   const params = useParams();
-//   console.log(params);
+  // const params = useParams();
+  // console.log(params);
   const navigate = useNavigate();
   const [form, setForm] = useState({
     name: '',
@@ -53,7 +53,7 @@ const EditUser = () => {
         <input
           className="border p-2 rounded"
           name="email"
-          value={form.email}
+          value={form.email.toLocaleLowerCase()}
           onChange={handleChange}
           placeholder="Email"
         />
