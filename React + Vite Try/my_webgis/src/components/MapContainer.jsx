@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, createContext, useContext } from "react";
 import "ol/ol.css";
 import { Map, View } from "ol";
 import { Tile as TileLayer, Vector as VectorLayer } from "ol/layer";
@@ -218,7 +218,7 @@ Questo aggiunge il layer (con i confini dei paesi) alla mappa, così da vederli 
   return (
     <>
       <Navbar onSearch={handleSearchPlace} onTogglePopulationLabels={togglePopulationLabels}/>
-      <div ref={mapRef} className="w-full h-screen" />
+      <div ref={mapRef} className="w-full h-screen pt-16" />
       <Controls onResetView={resetView}/>
     </>
   );

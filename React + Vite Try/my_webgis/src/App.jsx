@@ -8,8 +8,8 @@ import Error from "./pages/Error";
 function App() {
   return (
     <Router>
-      <Navbar />
-      <div className="pt-[60px] h-[calc(100vh-60px)]">
+      {/* <Navbar /> */}
+      <div className="h-[calc(100vh-60px)]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/data" element={<Data />} />
